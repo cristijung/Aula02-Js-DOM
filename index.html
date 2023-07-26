@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula - DOM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <h2>Trabalhando com DOM</h2>
+      <hr />
+      <h3>getElementById</h3>
+      <p id="trocar" style="font-size: 36px; font-weight: bold">
+        Mudando de cor!
+      </p>
+      <input
+        type="button"
+        onclick="changeColor('blue')"
+        class="btn btn-primary"
+        value="Azul"
+      />
+      <input
+        type="button"
+        onclick="changeColor('red')"
+        class="btn btn-danger"
+        value="Vermelho"
+      />
+      <input
+        type="button"
+        onclick="location.reload()"
+        class="btn btn-light"
+        value="Resetar"
+      />
+      <hr />
+      
+      <h2 id="alterar">Luke ...</h2>
+      <input
+        type="button"
+        onclick="document.getElementById('alterar').innerText='Eu sou seu pai!'"
+        class="btn btn-warning"
+        value="Trocar o texto"
+      />
+      <hr/>
+
+
+    </section>
+  </body>
+</html>
