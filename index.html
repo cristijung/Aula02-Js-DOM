@@ -99,6 +99,64 @@
         onclick="trocarFiltro('')"
         value="Redefinir"
       />
+
+      <hr />
+      <h3>Ocultar elementos</h3>
+      <div id="meuElemento">
+        <div>
+          <img
+            src="./assets/moby-dick-dois.jpg"
+            alt="MD"
+            class="rounded"
+            style="width: 40%"
+          />
+        </div>
+      </div>
+      <hr />
+      <p>
+        <button id="botaoElemento" class="btn btn-danger">
+          Esconder/Mostrar
+        </button>
+      </p>
+      <script>
+        const meuElemento = document.getElementById("meuElemento");
+        const botao = document.getElementById("botaoElemento");
+
+        botao.addEventListener("click", () => {
+          if (meuElemento.style.display === "none") {
+            meuElemento.style.display = "block";
+          } else {
+            meuElemento.style.display = "none";
+          }
+        });
+      </script>
+
+      <hr />
+
+      <h3>Usando appendChild com o DOM</h3>
+
+      <div>
+        <button id="criarTexto" class="btn btn-danger">
+          Criar mais um texto
+        </button>
+      </div>
+
+      <div id="conteudo"></div>
+
+      <script>
+        const conteudoP = document.getElementById("conteudo");
+        const btnCriarTexto = document.getElementById("criarTexto");
+        let contadorParagrafos = 1;
+
+        btnCriarTexto.addEventListener("click", () => {
+          const novoParagrafo = document.createElement("p");
+          novoParagrafo.textContent = `Este é um txt add de número ${contadorParagrafos}`;
+          conteudoP.appendChild(novoParagrafo);
+          contadorParagrafos++;
+        });
+      </script>
+
+      <hr />
     </section>
   </body>
 </html>
